@@ -200,12 +200,12 @@ section:nth-of-type(3n + 1) .landing__container::after {
     transition: all .4s;
 }
 
-.activated .landing__container::before {
+section.activated .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-.activated .landing__container::after {
+section.activated .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }

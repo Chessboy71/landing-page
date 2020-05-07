@@ -33,10 +33,11 @@ function navCheck(entries){
         sectionElements.forEach(section => {
             section.classList.remove('activated');
         })
-        entry.target.classList.add('activated');
+        window.setTimeout(entry.target.classList.add('activated'), 2000);
     
     })
 }
+
 const sectionScroll = (e) => {
     e.preventDefault();
       wantedActive = e.target.innerHTML.toLowerCase();

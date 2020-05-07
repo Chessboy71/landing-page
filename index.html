@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- TODO LIST : 
-    Start by linking your app.js. DONE
-    Build out your HTML and at least 3 content sections DONE.
-    Build the navigation menu
-    Add functionality to distinguish the section in view
-    Add the functionality to scroll to sections.
-    REFACTOR
-    Add additional sections to your HTML document.
-    Test the performance -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -19,8 +10,6 @@
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
   <header class="page__header">
     <nav class="navbar__menu">
       <!-- Navigation starts as empty UL that will be populated with JS -->
@@ -32,10 +21,6 @@
     <header class="main__hero">
       <h1>Landing Page </h1>
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
     <section id="section1" data-nav="Section 1" class="activated">
       <div class="landing__container">
         <h2>Section 1</h2>

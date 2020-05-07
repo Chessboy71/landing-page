@@ -17,11 +17,17 @@ const navMenu = document.querySelector('.navbar__menu');
 navCreate = (e) => {
     anchor = document.createElement('a');
     anchor.className = 'menu__link';
-    anchor.innerHTML = e.id
+    anchor.innerHTML = e.id;
     list = document.createElement("li");
     list.appendChild(anchor);
     document.getElementById("navbar__list").appendChild(list);
 }
+
+/**
+ * End Helper Functions
+ * Begin Main Functions
+ * 
+*/
 function navCheck(entries){
     entries.forEach(entry => {
         sectionElements.forEach(section => {
@@ -31,20 +37,10 @@ function navCheck(entries){
     
     })
 }
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-sectionElements.forEach(section => {
-    observer.observe(section)
-})
-
 const sectionScroll = (e) => {
     e.preventDefault();
       wantedActive = e.target.innerHTML.toLowerCase();
       let activeSec = document.getElementById(wantedActive);
-      console.log(activeSec.offsetTop);
       window.scrollTo({
           top:activeSec.offsetTop,
           left:0,
@@ -57,8 +53,9 @@ const sectionScroll = (e) => {
 sectionElements.forEach(element => navCreate(element))
 
 // Add class 'active' to section when near top of viewport
-
-
+sectionElements.forEach(section => {
+    observer.observe(section);
+});
 
 // Scroll to anchor ID using scrollTO event
 navMenu.addEventListener('click', sectionScroll);
@@ -67,7 +64,5 @@ navMenu.addEventListener('click', sectionScroll);
  * Begin Events
  * 
 */
-
-// Set sections as active
 
 

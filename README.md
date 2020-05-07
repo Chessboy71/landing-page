@@ -8,3 +8,4 @@ Functionalities to add :
     Making some cool effects while you scroll Around the sections 
     and making a dynamic navigation bar. 
 
+![alt screenshot](img/screen.png)
